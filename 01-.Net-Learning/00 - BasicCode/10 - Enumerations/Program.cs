@@ -1,4 +1,4 @@
-﻿namespace _17Enumerations
+﻿namespace _10Enumerations
 {
     //Declare enumeration
     public enum Gender
@@ -27,7 +27,7 @@
             //Type casting
             WechatStatus wechatStatus = WechatStatus.online;
             //Cast enumeration to int
-            int status=(int)wechatStatus;
+            int status = (int)wechatStatus;
             //Cast int to enumeration
             WechatStatus statusEnum = (WechatStatus)3;
             WechatStatus statusEnum01 = (WechatStatus)8;//Cannot convert, directly output original number
@@ -42,7 +42,7 @@
             //Convert string to enumeration
             //typeof(WechatStatus) gets the WechatStatus type
             string enumStr = "3";
-            WechatStatus strEnum= (WechatStatus)Enum.Parse(typeof(WechatStatus), enumStr);
+            WechatStatus strEnum = (WechatStatus)Enum.Parse(typeof(WechatStatus), enumStr);
             Console.WriteLine(strEnum);//online
             Console.ReadKey();
         }
