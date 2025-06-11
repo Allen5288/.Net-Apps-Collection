@@ -66,6 +66,18 @@ namespace _01___OOP_Basic
             mediaDatabase1.Add(new _03_Inheri_MediaLibrary.AfterReview.DVD("Movie1", "Director1", "Great movie!"));
             mediaDatabase1.Add(new _03_Inheri_MediaLibrary.AfterReview.DVD("Movie2", "Director2", "Another great movie!"));
             mediaDatabase1.PrintAllMedia();
+
+            MediaItem cd1 = new _03_Inheri_MediaLibrary.AfterReview.CD("CD1", "Artist1", 15, "New album!");
+            MediaItem cd2 = new _03_Inheri_MediaLibrary.AfterReview.CD("CD2", "Artist2", 15, "New album!");
+            cd1.Print();
+            DVD dvd1 = new _03_Inheri_MediaLibrary.AfterReview.DVD("DVD1", "Artist1", "New album!");
+            DVD dvd2 = new _03_Inheri_MediaLibrary.AfterReview.DVD("DVD2", "Artist2", "New album!");
+
+            // we cannot new AbstractMediaItem because it is abstract. it has no implementation for its abstract methods.
+            // AbstractMediaItem abstractMediaItem = new AbstractMediaItem();
+            AbstractMediaItem mcd = new MCD();
+            AbstractMediaItem mdvd = new MDVD();
+
             #endregion
         }
     }
