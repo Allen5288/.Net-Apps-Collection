@@ -21,7 +21,7 @@ namespace _01___OOP_Basic._03_Inheri_MediaLibrary.AfterReview
             this.comment = comment;
         }
 
-        public void Print()
+        public virtual void Print()
         {
             
             Console.WriteLine($"{title} {playingTime} {gotIt} {comment}");

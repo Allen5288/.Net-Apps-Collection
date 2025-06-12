@@ -17,7 +17,8 @@ namespace _01___OOP_Basic._03_Inheri_MediaLibrary.AfterReview
             this.director = director;
         }
 
-        public void Print()
+        // new here indicates that we are hiding the base class method
+        public new void Print()
         {
             Console.WriteLine($"{title} {director} {playingTime} {comment}");
         }
