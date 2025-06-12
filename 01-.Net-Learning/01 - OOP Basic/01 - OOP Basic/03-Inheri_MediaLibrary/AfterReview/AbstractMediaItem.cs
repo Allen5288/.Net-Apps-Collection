@@ -11,6 +11,12 @@ namespace _01___OOP_Basic._03_Inheri_MediaLibrary.AfterReview
     {
         // abstract class - no implementation, only declaration
         protected abstract void DoNothing();
+
+        public virtual void DoOnething()
+        {
+            // this method can be overridden in derived classes
+            Console.WriteLine($"AbstractMediaItem DoOnething");
+        }
     }
 
     public class MCD : AbstractMediaItem
@@ -18,6 +24,11 @@ namespace _01___OOP_Basic._03_Inheri_MediaLibrary.AfterReview
         protected override void DoNothing()
         {
             Console.WriteLine($"MCD DoNothing");
+        }
+
+        public override void DoOnething()
+        {
+            base.DoOnething();
         }
     }
 
