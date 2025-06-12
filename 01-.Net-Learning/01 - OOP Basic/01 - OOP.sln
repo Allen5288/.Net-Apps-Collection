@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "00 - Draw Shape Ellipse Cir
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02 - OOP Advanced", "02 - OOP Advanced\02 - OOP Advanced.csproj", "{042157C7-1E01-4FD4-89D7-7F3AED467BDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03 - DependencyInjection", "03 - DependencyInjection\03 - DependencyInjection.csproj", "{D20E99A4-8222-4124-A326-2E0E61E38501}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{042157C7-1E01-4FD4-89D7-7F3AED467BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{042157C7-1E01-4FD4-89D7-7F3AED467BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{042157C7-1E01-4FD4-89D7-7F3AED467BDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D20E99A4-8222-4124-A326-2E0E61E38501}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D20E99A4-8222-4124-A326-2E0E61E38501}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D20E99A4-8222-4124-A326-2E0E61E38501}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D20E99A4-8222-4124-A326-2E0E61E38501}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
