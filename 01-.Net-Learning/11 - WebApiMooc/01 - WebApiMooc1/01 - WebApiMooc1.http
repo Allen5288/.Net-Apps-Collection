@@ -1,0 +1,6 @@
+@_01___WebApiMooc1_HostAddress = http://localhost:5004
+
+GET {{_01___WebApiMooc1_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
