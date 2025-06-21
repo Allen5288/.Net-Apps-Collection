@@ -1,0 +1,304 @@
+### Web API Controllers Testing Examples
+### This file demonstrates different types of HTTP requests for the Web API controllers
+### You can use this with VS Code REST Client extension or similar tools
+
+# =============================================================================
+# USER CONTROLLER EXAMPLES - Basic CRUD Operations
+# =============================================================================
+
+### Get all users with pagination
+GET https://localhost:7155/api/user?page=1&pageSize=5
+Accept: application/json
+
+### Get specific user by ID
+GET https://localhost:7155/api/user/1
+Accept: application/json
+
+### Create new user
+POST https://localhost:7155/api/user
+Content-Type: application/json
+
+{
+  "name": "Alice Johnson",
+  "email": "alice@example.com",
+  "age": 28
+}
+
+### Update user (PUT - full update)
+PUT https://localhost:7155/api/user/1
+Content-Type: application/json
+
+{
+  "name": "John Doe Updated",
+  "email": "john.updated@example.com",
+  "age": 31
+}
+
+### Partially update user (PATCH)
+PATCH https://localhost:7155/api/user/2
+Content-Type: application/json
+
+{
+  "age": 26
+}
+
+### Search users
+GET https://localhost:7155/api/user/search?query=john
+Accept: application/json
+
+### Delete user
+DELETE https://localhost:7155/api/user/3
+
+# =============================================================================
+# PRODUCT CONTROLLER EXAMPLES - Advanced API Features
+# =============================================================================
+
+### Get products with filters and sorting
+GET https://localhost:7155/api/product?category=Electronics&minPrice=50&maxPrice=500&sortBy=price&sortDesc=false
+Accept: application/json
+
+### Get products as XML (content negotiation)
+GET https://localhost:7155/api/product
+Accept: application/xml
+
+### Get specific product
+GET https://localhost:7155/api/product/1
+Accept: application/json
+
+### Create new product
+POST https://localhost:7155/api/product
+Content-Type: application/json
+
+{
+  "name": "Wireless Keyboard",
+  "price": 59.99,
+  "category": "Electronics",
+  "stock": 30
+}
+
+### Update product stock
+PUT https://localhost:7155/api/product/1/stock?reason=Restock
+Content-Type: application/json
+
+{
+  "newStock": 75
+}
+
+### Get product categories summary
+GET https://localhost:7155/api/product/categories
+Accept: application/json
+
+### Bulk create products
+POST https://localhost:7155/api/product/bulk
+Content-Type: application/json
+
+[
+  {
+    "name": "Smartphone Case",
+    "price": 15.99,
+    "category": "Electronics",
+    "stock": 100
+  },
+  {
+    "name": "USB Cable",
+    "price": 9.99,
+    "category": "Electronics",
+    "stock": 200
+  }
+]
+
+### Delete product (with conflict example)
+DELETE https://localhost:7155/api/product/1
+
+### Force delete product
+DELETE https://localhost:7155/api/product/1?force=true
+
+# =============================================================================
+# FILE CONTROLLER EXAMPLES - File Upload/Download Operations
+# =============================================================================
+
+### Upload single file (multipart/form-data)
+POST https://localhost:7155/api/file/upload
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="file"; filename="test.txt"
+Content-Type: text/plain
+
+This is a test file content.
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="description"
+
+Test file upload
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Get file info
+GET https://localhost:7155/api/file/{{fileId}}/info
+Accept: application/json
+
+### Download file
+GET https://localhost:7155/api/file/{{fileId}}?download=true
+
+### Stream file (for large files)
+GET https://localhost:7155/api/file/{{fileId}}/stream
+
+### List all files with pagination
+GET https://localhost:7155/api/file?page=1&pageSize=10&contentType=text
+Accept: application/json
+
+### Delete file
+DELETE https://localhost:7155/api/file/{{fileId}}
+
+# =============================================================================
+# ANALYTICS CONTROLLER EXAMPLES - Advanced Async Operations
+# =============================================================================
+
+### Record analytics event
+POST https://localhost:7155/api/analytics/event
+Content-Type: application/json
+
+{
+  "eventType": "page_view",
+  "userId": "user123",
+  "sessionId": "session456",
+  "properties": {
+    "page": "/home",
+    "referrer": "google.com",
+    "browser": "Chrome"
+  }
+}
+
+### Get specific analytics event
+GET https://localhost:7155/api/analytics/event/{{eventId}}
+Accept: application/json
+
+### Query analytics events with complex filtering
+GET https://localhost:7155/api/analytics/events?userId=user123&eventType=page_view&startDate=2024-01-01&endDate=2024-12-31&page=1&pageSize=20&sortBy=timestamp&sortDesc=true
+Accept: application/json
+
+### Get dashboard metrics
+GET https://localhost:7155/api/analytics/dashboard?timeframe=last7d
+Accept: application/json
+
+### Export analytics data as JSON
+GET https://localhost:7155/api/analytics/export?format=json&userId=user123
+Accept: application/json
+
+### Export analytics data as CSV
+GET https://localhost:7155/api/analytics/export?format=csv&eventType=page_view
+
+### Export analytics data as XML
+GET https://localhost:7155/api/analytics/export?format=xml&startDate=2024-01-01
+
+### Health check
+GET https://localhost:7155/api/analytics/health
+Accept: application/json
+
+### Bulk delete analytics events (with confirmation)
+DELETE https://localhost:7155/api/analytics/events
+Content-Type: application/json
+
+{
+  "confirmationCode": "DELETE_EVENTS",
+  "deleteAll": false,
+  "olderThan": "2024-01-01T00:00:00Z"
+}
+
+# =============================================================================
+# WEATHER FORECAST CONTROLLER EXAMPLES - Default Controller
+# =============================================================================
+
+### Get weather forecast
+GET https://localhost:7155/WeatherForecast
+Accept: application/json
+
+# =============================================================================
+# ERROR HANDLING EXAMPLES
+# =============================================================================
+
+### Invalid user creation (validation error)
+POST https://localhost:7155/api/user
+Content-Type: application/json
+
+{
+  "name": "",
+  "email": "invalid-email",
+  "age": -5
+}
+
+### Get non-existent user (404 error)
+GET https://localhost:7155/api/user/999
+Accept: application/json
+
+### Invalid product data (validation error)
+POST https://localhost:7155/api/product
+Content-Type: application/json
+
+{
+  "name": "A",
+  "price": -10,
+  "category": "",
+  "stock": -5
+}
+
+### Analytics event without confirmation code (400 error)
+DELETE https://localhost:7155/api/analytics/events
+Content-Type: application/json
+
+{
+  "confirmationCode": "WRONG_CODE",
+  "deleteAll": true
+}
+
+# =============================================================================
+# TESTING DIFFERENT HTTP METHODS AND STATUS CODES
+# =============================================================================
+
+### Test OPTIONS request (CORS preflight)
+OPTIONS https://localhost:7155/api/user
+Access-Control-Request-Method: POST
+Access-Control-Request-Headers: Content-Type
+
+### Test HEAD request (headers only)
+HEAD https://localhost:7155/api/user
+
+### Test with custom headers
+GET https://localhost:7155/api/user
+Accept: application/json
+X-Custom-Header: test-value
+User-Agent: API-Test-Client/1.0
+
+# =============================================================================
+# VARIABLES FOR REUSE
+# =============================================================================
+# Note: Replace {{variableName}} with actual values when testing
+# Example variables:
+# @fileId = 123e4567-e89b-12d3-a456-426614174000
+# @eventId = 123e4567-e89b-12d3-a456-426614174001
+# @userId = user123
+# @sessionId = session456
+
+# =============================================================================
+# PERFORMANCE TESTING EXAMPLES
+# =============================================================================
+
+### Concurrent requests simulation
+GET https://localhost:7155/api/product
+Accept: application/json
+
+### Large data query
+GET https://localhost:7155/api/analytics/events?pageSize=1000
+Accept: application/json
+
+### Stress test with multiple operations
+POST https://localhost:7155/api/analytics/event
+Content-Type: application/json
+
+{
+  "eventType": "stress_test",
+  "userId": "test_user_{{$randomInt}}",
+  "properties": {
+    "timestamp": "{{$timestamp}}",
+    "test_id": "{{$guid}}"
+  }
+}
