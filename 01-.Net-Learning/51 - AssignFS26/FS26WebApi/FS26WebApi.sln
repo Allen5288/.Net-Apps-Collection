@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36203.30
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T01-T02_FS26-1010-1011_CreateAndConfigureWebApi", "T01-T02_FS26-1010-1011_CreateAndConfigureWebApi\T01-T02_FS26-1010-1011_CreateAndConfigureWebApi.csproj", "{C07D4CCE-1B1A-0A8C-3500-540CAA1C5707}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T03_FS26-1012_ReadConfiguration", "T03_FS26-1012_ReadConfiguration\T03_FS26-1012_ReadConfiguration.csproj", "{75642DAF-FC86-45FA-BDDB-1E45C7FC1B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T04_FS26_1013_ReturnTypes", "T04_FS26_1013_ReturnTypes\T04_FS26_1013_ReturnTypes.csproj", "{D1B00B7A-0DE3-4842-A834-35E0D4A70246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T05_FS26_1014_RouteAttributes", "T05_FS26_1014_RouteAttributes\T05_FS26_1014_RouteAttributes.csproj", "{CDD8FFC1-F5E4-4674-B5F5-4AB959EAE246}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T06_FS26-1015_BindingParameters", "T06_FS26-1015_BindingParameters\T06_FS26-1015_BindingParameters.csproj", "{DF9E55E5-62A3-4F29-8503-240ED8010312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T07_FS26_1016_ModelValidation", "T07_FS26_1016_ModelValidation\T07_FS26_1016_ModelValidation.csproj", "{AA7779BD-2051-436D-A418-C1EF01F0CA7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C07D4CCE-1B1A-0A8C-3500-540CAA1C5707}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C07D4CCE-1B1A-0A8C-3500-540CAA1C5707}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C07D4CCE-1B1A-0A8C-3500-540CAA1C5707}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C07D4CCE-1B1A-0A8C-3500-540CAA1C5707}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75642DAF-FC86-45FA-BDDB-1E45C7FC1B24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75642DAF-FC86-45FA-BDDB-1E45C7FC1B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75642DAF-FC86-45FA-BDDB-1E45C7FC1B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75642DAF-FC86-45FA-BDDB-1E45C7FC1B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B00B7A-0DE3-4842-A834-35E0D4A70246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B00B7A-0DE3-4842-A834-35E0D4A70246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B00B7A-0DE3-4842-A834-35E0D4A70246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B00B7A-0DE3-4842-A834-35E0D4A70246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDD8FFC1-F5E4-4674-B5F5-4AB959EAE246}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD8FFC1-F5E4-4674-B5F5-4AB959EAE246}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD8FFC1-F5E4-4674-B5F5-4AB959EAE246}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD8FFC1-F5E4-4674-B5F5-4AB959EAE246}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF9E55E5-62A3-4F29-8503-240ED8010312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF9E55E5-62A3-4F29-8503-240ED8010312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF9E55E5-62A3-4F29-8503-240ED8010312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF9E55E5-62A3-4F29-8503-240ED8010312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA7779BD-2051-436D-A418-C1EF01F0CA7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA7779BD-2051-436D-A418-C1EF01F0CA7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA7779BD-2051-436D-A418-C1EF01F0CA7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA7779BD-2051-436D-A418-C1EF01F0CA7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0AD8B8F2-DC2C-49E6-87EE-48102383C67D}
+	EndGlobalSection
+EndGlobal
