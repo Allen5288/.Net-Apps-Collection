@@ -1,0 +1,6 @@
+@T03_FS26_1012_ReadConfiguration_HostAddress = http://localhost:5111
+
+GET {{T03_FS26_1012_ReadConfiguration_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

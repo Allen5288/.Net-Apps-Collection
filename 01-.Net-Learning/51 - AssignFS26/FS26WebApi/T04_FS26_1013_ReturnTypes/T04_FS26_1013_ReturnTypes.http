@@ -1,0 +1,6 @@
+@T04_FS26_1013_ReturnTypes_HostAddress = http://localhost:5008
+
+GET {{T04_FS26_1013_ReturnTypes_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
